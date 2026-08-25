@@ -1,0 +1,29 @@
+{
+  "name": "workshop-27-08-26",
+  "version": "0.0.0",
+  "description": "Exemplo de servidor MCP para o workshop do bootcamp 'AWS AI FDE for Commerce' de 27/08/2026",
+  "keywords": [
+    "node",
+    "javascript",
+    "mcp",
+    "tools",
+    "workshop"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leostacowskicompasso/workshop-27-08-26.git"
+  },
+  "license": "Unlicense",
+  "author": "Leonardo Stacowski <leonardo.stacowski@compasso.com.br> (https://www.linkedin.com/in/leonardo-ribeiro-stacowski/)",
+  "type": "module",
+  "main": "servers/express/main.js",
+  "scripts": {
+    "start:stdio": "node --watch servers/stdio/main.js --harmony",
+    "start:http": "node --watch servers/http/main.js --harmony",
+    "start:express": "node --watch servers/express/main.js --harmony"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "express": "^5.2.1"
+  }
+}
