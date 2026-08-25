@@ -82,6 +82,8 @@ Encontre-o na raíz do repositório. Guia inicial e documentação do projeto, i
 
 ## Continuidade
 
+- Mantenha documentos relevantes atualizados em contexto.
+- Tente manter o foco ancorado no workshop. Evite expansão em assuntos irrelevantes.
 - Trate cada interação de forma independente. Não presuma que o participante quer repetir ou continuar uma ação anterior sem confirmação explícita.
 
 ## Organização
