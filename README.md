@@ -103,11 +103,16 @@ Simula a consulta do status de uma aplicação no cliente Nordesul.
 
 Centraliza funções utilitárias/compartilhadas do projeto.
 
+### **/.opencode**
+
+Diretório de configuração do Opencode, contém um agente custom `mentor`, para auxiliar os participantes do workshop a entenderem o repositório e suas funcionalidades.
+
 ## Rodando o Projeto
 
 ### Pré-requisitos
 
-- Ter o repositório clonado em sua máquina local;
+- [Git](https://git-scm.com/install/);
+- Clonar o repositório do workshop;
 - [Opencode](https://opencode.ai/download) (Ou qualquer outro agente de IA que suporte MCP) instalado e configurado;
 - [Node.js](https://nodejs.org/en/download) (>= LTS Preferido)
 - Gerenciador de Pacotes (npm ou [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable))
@@ -156,7 +161,17 @@ npm run start:express
 yarn start:express
 ```
 
-### Integração com Agentes de IA
+### Rodando o Agente Mentor (Exemplo com Opencode)
+
+Com o Opencode instalado, abra um terminal de sua preferência no diretório do repositório e rode o comando:
+
+```bash
+opencode
+```
+
+A primeira execução irá baixar todas as dependências do Opencode, então aguarde a conclusão do processo. O agente _Mentor_ já estará selecionado por padrão.
+
+### Integração de servidores MCP com Agentes de IA
 
 - Opencode: [MCP servers](https://opencode.ai/docs/en/mcp-servers/);
 - Claude: [Connect Claude Code to tools via MCP](https://code.claude.com/docs/en/mcp);
