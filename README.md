@@ -99,6 +99,10 @@ Simula a consulta de uma documentação de API no cliente Nordesul.
 
 Simula a consulta do status de uma aplicação no cliente Nordesul.
 
+### **/utils**
+
+Centraliza funções utilitárias/compartilhadas do projeto.
+
 ## Rodando o Projeto
 
 ### Pré-requisitos
