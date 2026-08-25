@@ -87,9 +87,9 @@ Exemplos de _tools_ customizadas, que podem ser usadas por Agentes de IA para in
 
 Simula o deploy de uma aplicação no cliente Nordesul.
 
-- **/tools/nordesul-git**
+- **/tools/nordesul-delivery**
 
-Simula padrões e contratos _git_ para o projeto.
+Simula padrões e contratos de implementação para o projeto.
 
 - **/tools/nordesul-reference**
 
@@ -107,6 +107,8 @@ Centraliza funções utilitárias/compartilhadas do projeto.
 
 ### Pré-requisitos
 
+- Ter o repositório clonado em sua máquina local;
+- [Opencode](https://opencode.ai/download) (Ou qualquer outro agente de IA que suporte MCP) instalado e configurado;
 - [Node.js](https://nodejs.org/en/download) (>= LTS Preferido)
 - Gerenciador de Pacotes (npm ou [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable))
 
