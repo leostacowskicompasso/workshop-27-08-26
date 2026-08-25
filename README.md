@@ -20,7 +20,7 @@ Encontre a lista completa aqui: [Available SDKs](https://modelcontextprotocol.io
 
 ## Opções de Transporte
 
-Focando no contexto do workshop, vamos explorar as opções de transporte mais comuns/populares para Node.js, que são:
+Focando no contexto do workshop, vamos explorar as opções de transporte mais comuns/populares para Node.js:
 
 ### stdio
 
@@ -46,7 +46,7 @@ Use de tecnologias/frameworks de Node.js para facilitar a implementação do pro
 
 Cliente **Nordesul**
 
-1.  Considere um projeto de e-commerce atuando em um grande cliente, com uma equipe de 20 desenvolvedores alocados para fazer a migração de sua loja virtual legada (_V0_) para um framework mais moderno (_V1_). O objetivo é que a loja virtual _V1_ seja idêntica a _V0_, mas use melhorias de performance do _V1_.
+1.  Considere um projeto de e-commerce em um grande cliente, com uma equipe de 20 desenvolvedores alocados para fazer a migração de sua loja virtual legada (_V0_) para um framework mais moderno (_V1_). O objetivo é que a loja virtual _V1_ seja idêntica a _V0_, mas use melhorias de performance do _V1_.
 
 2.  Como diversos desenvolvedores atuarão na mesma base de código, é primordial que as entregas possuam a melhor padronização e qualidade possíveis, seguindo as normas e identidade da nossa companhia.
 
