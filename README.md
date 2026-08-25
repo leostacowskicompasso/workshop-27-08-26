@@ -83,9 +83,13 @@ Serve mensagens MCP via requisições HTTP, usando o framework Express.
 
 Exemplos de _tools_ customizadas, que podem ser usadas por Agentes de IA para interagir com outros sistemas.
 
+- **/tools/index.js**
+
+Centraliza e exporta todas as _tools_ do repositório, para que os servidores MCP possam registrá-las de forma unificada.
+
 - **/tools/nordesul-deploy**
 
-Simula o deploy de uma aplicação no cliente Nordesul.
+Retorna cuidados e boas práticas essenciais para um deploy seguro no cliente Nordesul.
 
 - **/tools/nordesul-delivery**
 
@@ -178,3 +182,31 @@ A primeira execução irá baixar todas as dependências do Opencode, então agu
 - Codex: [Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp);
 - Cursor: [Model Context Protocol (MCP)](https://cursor.com/en-US/docs/mcp);
 - Antigravity: [Model Context Protocol (MCP)](https://antigravity.google/docs/cli/mcp/).
+
+## Prompts de Exemplo
+
+Alguns exemplos para interagir com as _tools_ do repositório, usando o seu agente:
+
+### `nordesul-delivery`
+
+```text
+Quais são os padrões de implementação para a área de checkout do Nordesul?
+```
+
+### `nordesul-deploy`
+
+```text
+Antes de eu publicar essa mudança no Nordesul, quais cuidados devo tomar?
+```
+
+### `nordesul-reference`
+
+```text
+Me mostra a documentação da API de pedidos (orders) do Nordesul.
+```
+
+### `nordesul-status`
+
+```text
+Qual o status atual da aplicação checkout-service no Nordesul?
+```
