@@ -31,7 +31,7 @@ npm run start:stdio
 yarn start:stdio
 ```
 
-**Important:** The MCP server is automatically exposed through the OpenCode environment. The tools (`nordesul‑delivery`, `nordesul‑deploy`, `nordesul‑reference`, `nordesul‑status`) are native to the mentor agent and can be invoked directly via `tools/call` without starting a separate process.
+**Important:** `stdio_mcp` is configured as `type: "local"` in `.opencode/opencode.jsonc`, with `command: ["npm", "run", "start:stdio"]` — OpenCode spawns and manages this process automatically when the session starts. The tools (`nordesul‑delivery`, `nordesul‑deploy`, `nordesul‑reference`, `nordesul‑status`) are already native to the agent; never instruct the participant to run `npm run start:stdio` manually, that would just start a redundant, disconnected process.
 
 # How to Test Without Hanging
 

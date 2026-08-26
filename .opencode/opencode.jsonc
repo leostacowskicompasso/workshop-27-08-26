@@ -7,10 +7,12 @@
   },
   "agent": {
     "plan": {
-      "enabled": false,
+      "hidden": true,
+      "disable": false,
     },
     "build": {
-      "enabled": false,
+      "hidden": true,
+      "disable": false,
     },
   },
   "default_agent": "mentor",
@@ -29,7 +31,7 @@
     },
     "express_mcp": {
       "type": "remote",
-      "url": "http://localhost:8787",
+      "url": "http://localhost:8788",
       "enabled": true,
     },
   },

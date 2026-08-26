@@ -24,7 +24,7 @@ https://ts.sdk.modelcontextprotocol.io/v2/serving/express.html
 # Server Files
 
 - `servers/express/main.js` — entrypoint, registers the _tools_ from `tools/index.js` via `McpServer.registerTool`, builds the handler with `createMcpHandler`, and serves via `app.all('/', toNodeHandler(handler))`.
-- `servers/express/config.js` — `SERVER.URL`/`SERVER.PORT` (default: `http://localhost:8787`), `SERVER.NAME`/`SERVER.VERSION`, `LOGGER.PREFIX`.
+- `servers/express/config.js` — `SERVER.URL`/`SERVER.PORT` (default: `http://localhost:8788`), `SERVER.NAME`/`SERVER.VERSION`, `LOGGER.PREFIX`.
 
 **Note:** there's no `express.json()` or any other body-parsing middleware registered — `toNodeHandler` already reads the request body straight from the stream. Adding a global body parser would break that read (the stream would already be consumed).
 
@@ -36,7 +36,7 @@ npm run start:express
 yarn start:express
 ```
 
-**Important:** The MCP server is automatically exposed through the OpenCode environment, and its tools (`nordesul‑delivery`, `nordesul‑deploy`, `nordesul‑reference`, `nordesul‑status`) are native to the agent. You can invoke them directly without manually launching the server.
+**Important:** Unlike `stdio` (which OpenCode spawns automatically as a `local` MCP), `express_mcp` is configured as `type: "remote"` in `.opencode/opencode.jsonc`, pointing at `http://localhost:8788`. OpenCode does **not** start this process — the participant must run `npm run start:express` (or `yarn start:express`) manually, in its own terminal, and keep it running (the `--watch` flag blocks the terminal). Only after the server is up will the `express_mcp*` tools appear in the agent's tool set.
 
 # How to Test Without Hanging
 
@@ -50,7 +50,7 @@ Start-Sleep -Seconds 2
 # 2. Call a tool directly (no init needed if already connected)
 node -e "
 async function run() {
-  let res = await fetch('http://localhost:8787/', {
+  let res = await fetch('http://localhost:8788/', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'accept': 'application/json, text/event-stream' },
     body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'nordesul-status', arguments: {} } })
@@ -75,7 +75,7 @@ data: {"result":{"content":[{"type":"text","text":"Aplicação: checkout-service
 
 # Common Errors / Troubleshooting
 
-- **Port `8787` already in use**: `servers/http` and `servers/express` use the **same port by default** (`config.js`) — don't run both at the same time without changing `SERVER.PORT` on one of them.
+- **Port already in use**: `servers/http` defaults to `8787` and `servers/express` defaults to `8788` (`config.js`) — they use different ports and can run at the same time. If you still hit a conflict, check for a stray process already bound to the port.
 - **`toNodeHandler is not a function` / import failing**: confirm `@modelcontextprotocol/node` is installed (`node_modules/@modelcontextprotocol/node`) — it's a **separate** package from `@modelcontextprotocol/server`, not bundled with it.
 - **`does not provide an export named 'default'`**: some tool in `tools/*/tool.js` is still `// TODO`. `tools/index.js` imports all 4 tools unconditionally.
 - **Request body arrives empty/undefined in the tool**: check that no body-parsing middleware (`express.json()`, `bodyParser.json()`, etc.) was added before the route — that would consume the stream before `toNodeHandler` can read it.

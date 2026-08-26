@@ -2,7 +2,7 @@ export const SERVER = {
   NAME: 'express-mcp',
   VERSION: '0.0.0',
   URL: 'http://localhost',
-  PORT: 8787,
+  PORT: 8788,
 }
 
 export const LOGGER = {
