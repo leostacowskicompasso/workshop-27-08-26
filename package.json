@@ -23,6 +23,7 @@
     "start:express": "node --watch servers/express/main.js --harmony"
   },
   "dependencies": {
+    "@modelcontextprotocol/node": "^2.0.0",
     "@modelcontextprotocol/server": "^2.0.0",
     "express": "^5.2.1",
     "zod": "^4.4.3"

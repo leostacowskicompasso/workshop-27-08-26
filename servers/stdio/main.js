@@ -1,8 +1,3 @@
-/* 
-  Reference:
-    https://ts.sdk.modelcontextprotocol.io/v2/serving/stdio.html
-*/
-
 import { McpServer } from '@modelcontextprotocol/server'
 import { serveStdio } from '@modelcontextprotocol/server/stdio'
 

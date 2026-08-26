@@ -1,7 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "username": "Participante",
-  "shell": "powershell",
   "permission": {
     "*": "allow",
     "websearch": "deny",
@@ -18,20 +17,20 @@
   "model": "opencode/mimo-v2.5-free",
   "small_model": "opencode/nemotron-3-ultra-free",
   "mcp": {
-    // "stdio_mcp": {
-    //   "type": "remote",
-    //   "url": "http://localhost:3100/local-mcp",
-    //   "enabled": true
-    // },
-    // "http_mcp": {
-    //   "type": "remote",
-    //   "url": "http://localhost:8787",
-    //   "enabled": true,
-    // },
-    // "express_mcp": {
-    //   "type": "remote",
-    //   "url": "http://localhost:8787",
-    //   "enabled": true,
-    // },
+    "stdio_mcp": {
+      "type": "local",
+      "command": ["npm", "run", "start:stdio"],
+      "enabled": true,
+    },
+    "http_mcp": {
+      "type": "remote",
+      "url": "http://localhost:8787",
+      "enabled": true,
+    },
+    "express_mcp": {
+      "type": "remote",
+      "url": "http://localhost:8787",
+      "enabled": true,
+    },
   },
 }
