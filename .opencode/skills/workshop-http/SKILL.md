@@ -66,7 +66,7 @@ Responses come back in **SSE** format by default (`createMcpHandler`'s `response
 
 ```
 event: message
-data: {"result":{"protocolVersion":"2025-06-18","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"http-mcp","version":"0.0.0"}},"jsonrpc":"2.0","id":1}
+data: {"result":{"protocolVersion":"2026-07-28","capabilities":{"tools":{"listChanged":true}},"serverInfo":{"name":"http-mcp","version":"0.0.0"}},"jsonrpc":"2.0","id":1}
 ```
 
 # Common Errors / Troubleshooting

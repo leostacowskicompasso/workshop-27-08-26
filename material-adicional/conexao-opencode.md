@@ -266,5 +266,5 @@ Você pode adicionar vários servidores MCP:
 ## 📚 Referências
 
 - [Opencode MCP Servers Documentation](https://opencode.ai/docs/mcp-servers/)
-- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/server.html)
+- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
 - [Repositório](https://github.com/leostacowskicompasso/workshop-27-08-26)

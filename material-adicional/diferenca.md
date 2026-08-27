@@ -248,5 +248,5 @@ Cliente ◀──── Resultado ─────── Servidor
 ## 📚 Referências
 
 - [MCP Specification](https://modelcontextprotocol.io/specification/2026-07-28)
-- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/server.html)
+- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
 - [MCP Documentation](https://modelcontextprotocol.io/docs)

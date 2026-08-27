@@ -237,5 +237,5 @@ Cada linha é uma mensagem JSON completa!
 ## 📚 Referências
 
 - [MCP Specification - Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)
-- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/server.html)
+- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
 - [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification)

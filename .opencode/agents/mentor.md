@@ -46,8 +46,8 @@ Encontre-o na raíz do repositório. Guia inicial e documentação do projeto, i
 
 - [README.md no GitHub](https://github.com/leostacowskicompasso/workshop-27-08-26/blob/main/README.md)
 - [Node.js LTS](https://nodejs.org/docs/latest-v24.x/api/index.html)
-- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/server.html)
-- [MCP TypeScript SDK FAQ](https://ts.sdk.modelcontextprotocol.io/faq.html)
+- [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
+- [MCP TypeScript SDK FAQ](https://ts.sdk.modelcontextprotocol.io/v2/troubleshooting)
 - [Zod Schema](https://zod.dev/api)
 - [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification)
 

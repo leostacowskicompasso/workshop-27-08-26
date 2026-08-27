@@ -55,7 +55,7 @@ Para chamar uma ferramenta diretamente, basta enviar a mensagem `tools/call` (o 
 ```json
 {
   "result": {
-    "protocolVersion": "2025-06-18",
+    "protocolVersion": "2026-07-28",
     "capabilities": { "tools": { "listChanged": true } },
     "serverInfo": { "name": "stdio-mcp", "version": "0.0.0" }
   },
