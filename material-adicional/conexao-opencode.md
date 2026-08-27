@@ -262,8 +262,51 @@ Você pode adicionar vários servidores MCP:
 
 ---
 
+## ⌨️ Atalhos Úteis do TUI
+
+O Opencode usa uma **tecla líder** (`leader`) para a maioria dos atalhos — evita conflito com atalhos do próprio terminal. Por padrão a tecla líder é `ctrl+x`: você pressiona `ctrl+x`, solta, e depois pressiona a segunda tecla.
+
+### Atalhos mais úteis para o workshop
+
+| Ação | Atalho | Observação |
+|---|---|---|
+| **Abrir a paleta de comandos** | `ctrl+p` | Busca fuzzy por qualquer ação disponível — inclui **habilitar/desabilitar servidores MCP individualmente**, entre outras ações que não têm tecla fixa. Comece digitando "mcp" pra achar rápido. |
+| **Trocar de modelo** | `<leader> m` (ex.: `ctrl+x` depois `m`) | Equivale a `/models`. Também dá pra alternar entre os modelos usados recentemente com `F2` / `shift+F2`, sem abrir menu. |
+| **Trocar de agente** (ex.: sair do Mentor) | `Tab` / `Shift+Tab` | Cicla entre os agentes disponíveis. |
+| **Abrir lista de agentes** | `<leader> a` | Mostra todos os agentes configurados (inclui o `mentor`). |
+| **Nova sessão** | `<leader> n` | Equivale a `/new`. |
+| **Listar/trocar sessões** | `<leader> l` | Equivale a `/sessions`. |
+| **Interromper a resposta atual** | `Esc` | Cancela a geração em andamento. |
+| **Desfazer / Refazer última mensagem** | `<leader> u` / `<leader> r` | Reverte também mudanças de arquivo (usa Git por trás). |
+| **Mostrar/ocultar sidebar** | `<leader> b` | Útil pra ganhar espaço de tela durante a demo. |
+| **Trocar de tema** | `<leader> t` | Equivale a `/themes`. |
+| **Compactar sessão (resumir contexto)** | `<leader> c` | Equivale a `/compact`. |
+| **Copiar última mensagem** | `<leader> y` | |
+| **Ajuda** | `<leader> h` | Mostra o diálogo de ajuda / dicas. |
+
+> ⚠️ **Nota:** o Opencode não tem um atalho fixo chamado "Toggle MCP Servers" — habilitar/desabilitar um servidor MCP específico (`stdio_mcp`, `http_mcp`, `express_mcp`) na sessão atual é uma ação disponível dentro da **paleta de comandos** (`ctrl+p`), não uma combinação de teclas dedicada.
+
+### Personalizando
+
+Todos os atalhos são configuráveis via `tui.json`/`tui.jsonc` na raiz do projeto ou globalmente. Exemplo pra trocar a tecla líder:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "keybinds": {
+    "leader": "ctrl+x",
+    "model_list": "<leader>m",
+    "agent_list": "<leader>a"
+  }
+}
+```
+
+---
+
 ## 📚 Referências
 
 - [Opencode MCP Servers Documentation](https://opencode.ai/docs/mcp-servers/)
+- [Opencode TUI Documentation](https://opencode.ai/docs/tui/)
+- [Opencode Atalhos de Teclado (Keybinds)](https://opencode.ai/docs/keybinds/)
 - [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
 - [Repositório](https://github.com/leostacowskicompasso/workshop-27-08-26)

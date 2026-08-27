@@ -133,6 +133,14 @@ npm install
 yarn install
 ```
 
+### Instalando Opencode
+
+Em qualquer diretório, rode o comando:
+
+```bash
+npm i -g opencode-ai
+```
+
 ### Rodando os Servidores
 
 #### Servidor MCP via _stdio_:
@@ -219,20 +227,20 @@ A pasta `material-adicional/` contém documentação complementar para o worksho
 
 ### Leitura Recomendada (Antes ou Durante)
 
-| Arquivo | Conteúdo | Quando Ler |
-|---------|----------|------------|
-| `agentes.md` | O que são agentes de IA, glossário, analogias | Antes do workshop |
-| `conexao-opencode.md` | Como configurar o Opencode + troubleshooting | Durante o hands-on |
-| `exemplos.md` | Prompts de exemplo para tools e APIs públicas | Durante o hands-on |
+| Arquivo               | Conteúdo                                      | Quando Ler         |
+| --------------------- | --------------------------------------------- | ------------------ |
+| `agentes.md`          | O que são agentes de IA, glossário, analogias | Antes do workshop  |
+| `conexao-opencode.md` | Como configurar o Opencode + troubleshooting  | Durante o hands-on |
+| `exemplos.md`         | Prompts de exemplo para tools e APIs públicas | Durante o hands-on |
 
 ### Leitura Opcional (Aprofundamento)
 
-| Arquivo | Conteúdo | Nível |
-|---------|----------|-------|
-| `diferenca.md` | Servidor Web vs MCP, transportes | Intermediário |
-| `protocolo.md` | Métodos MCP (tools/list, tools/call) | Intermediário |
-| `jsonrpc.md` | JSON-RPC 2.0 em profundidade | Avançado |
-| `openai-api.md` | Como requests REST (OpenAI) funcionam, comparado ao MCP | Avançado |
+| Arquivo         | Conteúdo                                                | Nível         |
+| --------------- | ------------------------------------------------------- | ------------- |
+| `diferenca.md`  | Servidor Web vs MCP, transportes                        | Intermediário |
+| `protocolo.md`  | Métodos MCP (tools/list, tools/call)                    | Intermediário |
+| `jsonrpc.md`    | JSON-RPC 2.0 em profundidade                            | Avançado      |
+| `openai-api.md` | Como requests REST (OpenAI) funcionam, comparado ao MCP | Avançado      |
 
 ### Catálogo de APIs Públicas
 
@@ -241,6 +249,7 @@ Para o hands-on, escolha uma API do catálogo:
 🔗 **https://www.freepublicapis.com/tags/popular**
 
 APIs sugeridas (sem autenticação):
+
 - **Open Meteo** — Clima
 - **Free Meal API** — Receitas
 - **HackerNews** — Notícias de tech
