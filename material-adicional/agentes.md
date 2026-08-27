@@ -39,13 +39,14 @@ Agente: "Vou verificar o status..."
 Agente: [Usa tool nordesul-status]
    ↓
 Agente: "A loja virtual está online com 99.9% de uptime.
-         Quer que eu verifique o deploy da versão 1.2.3?"
+         Quer que eu liste os cuidados antes de um deploy?"
    ↓
 Usuário: "Sim, por favor"
    ↓
 Agente: [Usa tool nordesul-deploy]
    ↓
-Agente: "Deploy realizado com sucesso!"
+Agente: "Aqui está a checklist: valide em staging, tenha
+         rollback pronto, evite horários de pico..."
 ```
 
 **Características:**
@@ -201,7 +202,7 @@ Agente: "Deploy realizado com sucesso!"
 ## 🎯 Exemplo Prático: Deploy no Nordesul
 
 ### Cenário
-O usuário quer fazer deploy da loja virtual v1.2.3
+O usuário vai fazer deploy da loja virtual e quer se preparar antes
 
 ### Fluxo com Chat Tradicional
 ```
@@ -216,19 +217,22 @@ IA: "Para fazer deploy, você deve seguir os seguintes passos:
 
 ### Fluxo com Agente
 ```
-Usuário: "Faça o deploy da loja virtual v1.2.3"
+Usuário: "Vou fazer deploy da loja virtual, o que preciso checar antes?"
 
 Agente: "Vou verificar o status da aplicação primeiro..."
         [Usa nordesul-status]
 
-Agente: "A aplicação está online. Vou iniciar o deploy..."
+Agente: "A aplicação está online. Antes de publicar, veja os
+         cuidados essenciais..."
         [Usa nordesul-deploy]
 
-Agente: "Deploy realizado com sucesso!
-         Versão 1.2.3 está rodando em produção.
-         Quer que eu monitore por alguns minutos?"
+Agente: "Aqui está a checklist antes do deploy:
+         - Valide as mudanças em staging antes de produção
+         - Confirme que o rollback está pronto e testado
+         - Evite deploys em horários de pico
+         Quer que eu detalhe algum desses pontos?"
 ```
-→ O agente **executa tudo automaticamente**
+→ O agente **reúne o contexto e orienta** — `nordesul-deploy` é consultiva (retorna boas práticas), não executa o deploy de fato
 
 ---
 

@@ -48,6 +48,7 @@ Encontre-o na raíz do repositório. Guia inicial e documentação do projeto, i
 - [Node.js LTS](https://nodejs.org/docs/latest-v24.x/api/index.html)
 - [MCP TypeScript SDK](https://ts.sdk.modelcontextprotocol.io/v2/servers/tools)
 - [MCP TypeScript SDK FAQ](https://ts.sdk.modelcontextprotocol.io/v2/troubleshooting)
+- [OpenAI API Reference](https://developers.openai.com/api/reference/overview) — usado em `material-adicional/openai-api.md` para comparar requests REST com o MCP
 - [Zod Schema](https://zod.dev/api)
 - [JSON-RPC 2.0 Specification](https://www.jsonrpc.org/specification)
 

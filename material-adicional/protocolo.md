@@ -88,25 +88,20 @@ O cliente pergunta ao servidor quais tools estão disponíveis:
         "inputSchema": {
           "type": "object",
           "properties": {
-            "appName": {
+            "app": {
               "type": "string",
-              "description": "Nome da aplicação"
+              "description": "Nome da aplicação (opcional — se omitido, retorna dados de uma aplicação aleatória)"
             }
-          },
-          "required": ["appName"]
+          }
         }
       },
       {
         "name": "nordesul-deploy",
-        "title": "Deploy Aplicação",
-        "description": "Simula o deploy de uma aplicação",
+        "title": "Cuidados de Deploy",
+        "description": "Retorna uma checklist de boas práticas antes de um deploy",
         "inputSchema": {
           "type": "object",
-          "properties": {
-            "appName": { "type": "string" },
-            "version": { "type": "string" }
-          },
-          "required": ["appName", "version"]
+          "properties": {}
         }
       }
     ],
@@ -129,7 +124,7 @@ O cliente invoca uma tool específica:
   "params": {
     "name": "nordesul-status",
     "arguments": {
-      "appName": "loja-virtual-v1"
+      "app": "loja-virtual-v1"
     }
   }
 }

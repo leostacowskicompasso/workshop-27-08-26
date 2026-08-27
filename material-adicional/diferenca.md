@@ -170,11 +170,11 @@ Cliente ◀──── Resultado ─────── Servidor
   "params": {
     "name": "nordesul-status",
     "arguments": {
-      "appName": "loja-virtual-v1"
+      "app": "loja-virtual-v1"
     }
   },
   "_meta": {
-    "io.modelcontextprotocol.protocolVersion": "2026-07-28"
+    "io.modelcontextprotocol/protocolVersion": "2026-07-28"
   }
 }
 ```

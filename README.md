@@ -232,6 +232,7 @@ A pasta `material-adicional/` contém documentação complementar para o worksho
 | `diferenca.md` | Servidor Web vs MCP, transportes | Intermediário |
 | `protocolo.md` | Métodos MCP (tools/list, tools/call) | Intermediário |
 | `jsonrpc.md` | JSON-RPC 2.0 em profundidade | Avançado |
+| `openai-api.md` | Como requests REST (OpenAI) funcionam, comparado ao MCP | Avançado |
 
 ### Catálogo de APIs Públicas
 

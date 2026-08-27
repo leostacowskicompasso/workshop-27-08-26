@@ -41,23 +41,23 @@ O arquivo `.opencode/opencode.jsonc` deve conter:
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "nordesul": {
+    "stdio_mcp": {
       "type": "local",
-      "command": ["node", "servers/stdio/main.js"],
-      "cwd": ".",
+      "command": ["npm", "run", "start:stdio"],
       "enabled": true
     }
   }
 }
 ```
 
+Esse é exatamente o bloco `mcp.stdio_mcp` já presente em `.opencode/opencode.jsonc` na raiz do repositório — não é necessário recriá-lo, é só para referência.
+
 **Explicação das opções:**
 
 | Opção | Tipo | Descrição |
 |-------|------|-----------|
-| `type` | String | Tipo de conexão (`"local"` para stdio) |
-| `command` | Array | Comando para iniciar o servidor |
-| `cwd` | String | Diretório de trabalho (raiz do projeto) |
+| `type` | String | Tipo de conexão (`"local"` roda o `command` automaticamente; `"remote"` conecta a uma `url` já em execução) |
+| `command` | Array | Comando para iniciar o servidor (só em `type: "local"`) |
 | `enabled` | Boolean | Habilitar/desabilitar o servidor |
 
 ### 3. Verificar se o Servidor Funciona
@@ -106,21 +106,17 @@ O Opencode deve:
 ```jsonc
 {
   "$schema": "https://opencode.ai/config.json",
-  
-  // Configurações gerais
-  "theme": "dark",
-  
+  "default_agent": "mentor",
+
   // Servidores MCP
   "mcp": {
-    "nordesul": {
+    "stdio_mcp": {
       "type": "local",
-      "command": ["node", "servers/stdio/main.js"],
-      "cwd": ".",
-      "enabled": true,
-      "timeout": 10000  // 10 segundos
+      "command": ["npm", "run", "start:stdio"],
+      "enabled": true
     }
-  },
-  
+  }
+
   // Outras configurações...
 }
 ```
@@ -210,10 +206,10 @@ node servers/stdio/main.js
 ```jsonc
 {
   "mcp": {
-    "nordesul": {
+    "stdio_mcp": {
       "type": "local",
-      "command": ["node", "servers/stdio/main.js"],
-      "timeout": 15000  // Aumente o timeout
+      "command": ["npm", "run", "start:stdio"],
+      "timeout": 15000  // Aumente o timeout (verifique se o campo está disponível na versão do Opencode instalada)
     }
   }
 }
@@ -237,19 +233,22 @@ Você pode adicionar vários servidores MCP:
 ```jsonc
 {
   "mcp": {
-    "nordesul-stdio": {
+    "stdio_mcp": {
       "type": "local",
-      "command": ["node", "servers/stdio/main.js"],
+      "command": ["npm", "run", "start:stdio"],
       "enabled": true
     },
-    "nordesul-http": {
+    "http_mcp": {
       "type": "remote",
-      "url": "http://localhost:8787/mcp",
-      "enabled": false
+      "url": "http://localhost:8787",
+      "enabled": true
     }
   }
 }
 ```
+
+- `stdio_mcp` é `"local"`: o Opencode sobe o processo sozinho ao iniciar a sessão.
+- `http_mcp` é `"remote"`: o Opencode só conecta — o servidor precisa estar rodando à parte (`npm run start:http`, em outro terminal) antes de `enabled: true` funcionar.
 
 ---
 
@@ -257,7 +256,7 @@ Você pode adicionar vários servidores MCP:
 
 1. **Crie/edite** `.opencode/opencode.jsonc`
 2. **Adicione** o servidor MCP com `type: "local"`
-3. **Defina** o comando: `["node", "servers/stdio/main.js"]`
+3. **Defina** o comando: `["npm", "run", "start:stdio"]`
 4. **Inicie** o Opencode
 5. **Teste** fazendo perguntas que usem as tools
 

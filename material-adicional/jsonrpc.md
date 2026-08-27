@@ -140,7 +140,7 @@ Códigos acima de `0` podem ser usados para erros da aplicação:
   "error": {
     "code": 1001,
     "message": "Aplicação não encontrada",
-    "data": { "appName": "loja-v1" }
+    "data": { "app": "loja-v1" }
   },
   "id": 1
 }
@@ -271,7 +271,7 @@ O MCP usa JSON-RPC como **formato de mensagem padrão**. Veja como se aplica:
   "method": "tools/call",
   "params": {
     "name": "nordesul-status",
-    "arguments": { "appName": "loja-v1" }
+    "arguments": { "app": "loja-v1" }
   }
 }
 ```
