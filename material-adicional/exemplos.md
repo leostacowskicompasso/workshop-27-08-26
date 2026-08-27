@@ -113,21 +113,9 @@ export async function handler({ limit = 5 }) {
 
 ---
 
-### ⚽ Futebol (Football Data API)
-
-**API:** https://www.football-data.org/
-
-```text
-"Quais jogos da Premier League tem essa semana?"
-"Qual a tabela atual do Brasileirão?"
-"Quem é o artilheiro da Champions League?"
-```
-
----
-
 ### 🌍 Dados Econômicos (World Bank)
 
-**API:** https://datahelpdesk.worldbank.org/knowledgebase/topics/125589
+**API:** https://api.worldbank.org/v2/
 
 ```text
 "Qual o PIB do Brasil nos últimos 5 anos?"
@@ -135,16 +123,17 @@ export async function handler({ limit = 5 }) {
 "Qual a taxa de desemprego na América Latina?"
 ```
 
----
-
-### 🎮 Jogos Grátis (GamerPower)
-
-**API:** https://www.gamerpower.com/api-read
-
-```text
-"Tem algum jogo grátis disponível agora?"
-"Quais jogos estão em promoção na Steam?"
-"Me mostra os giveaways ativos de PC."
+**Exemplo de tool:**
+```javascript
+// tools/gdp/tool.js
+export async function handler({ countryCode = 'BR' }) {
+  const response = await fetch(
+    `https://api.worldbank.org/v2/country/${countryCode}/indicator/NY.GDP.MKTP.CD?format=json&per_page=5`
+  );
+  const [, data] = await response.json();
+  const [latest] = data;
+  return { content: [{ type: 'text', text: `PIB (${latest.date}): US$ ${latest.value.toLocaleString()}` }] };
+}
 ```
 
 ---

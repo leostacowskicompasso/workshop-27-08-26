@@ -244,5 +244,4 @@ APIs sugeridas (sem autenticação):
 - **Open Meteo** — Clima
 - **Free Meal API** — Receitas
 - **HackerNews** — Notícias de tech
-- **Football Data** — Futebol
-- **GamerPower** — Jogos grátis
+- **World Bank** — Dados econômicos
