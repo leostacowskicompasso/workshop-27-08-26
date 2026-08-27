@@ -1,4 +1,4 @@
-# Exemplos de Prompts — Workshop MCP
+# Exemplos de Prompts
 
 Aqui estão exemplos práticos de como usar tools MCP de forma natural e direta.
 

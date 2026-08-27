@@ -1,4 +1,4 @@
-# Conceitos de Agentes de IA - Guia para o Workshop
+# Conceitos de Agentes de IA
 
 ## 🤖 O que é um Agente de IA?
 
@@ -298,25 +298,6 @@ Agente: "Deploy realizado com sucesso!
 | **Skill** | Habilidade | "Habilidade de deploy" |
 | **Agent** | Sistema completo | LLM + Tools + Contexto |
 | **MCP** | Protocolo de comunicação | Conecta agente a sistemas |
-
----
-
-## 🎓 Dicas para o Workshop
-
-### Para Iniciantes
-- Comece com **analogias simples**
-- Use **exemplos do cotidiano**
-- Evite **jargões técnicos** no início
-
-### Para Demonstração
-- Mostre a **diferença na prática**
-- Use **cenários reais** do cliente
-- Deixe os participantes **testarem**
-
-### Para Discussão
-- Questione: "O que mais poderíamos automatizar?"
-- Explore: "Quais sistemas gostaríamos de conectar?"
-- Planeje: "Como isso mudaria nosso trabalho?"
 
 ---
 
