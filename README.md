@@ -210,3 +210,38 @@ Me mostra a documentação da API de pedidos (orders) do Nordesul.
 ```text
 Qual o status atual da aplicação checkout-service no Nordesul?
 ```
+
+---
+
+## 📚 Material de Apoio
+
+A pasta `material-adicional/` contém documentação complementar para o workshop.
+
+### Leitura Recomendada (Antes ou Durante)
+
+| Arquivo | Conteúdo | Quando Ler |
+|---------|----------|------------|
+| `agentes.md` | O que são agentes de IA, glossário, analogias | Antes do workshop |
+| `conexao-opencode.md` | Como configurar o Opencode + troubleshooting | Durante o hands-on |
+| `exemplos.md` | Prompts de exemplo para tools e APIs públicas | Durante o hands-on |
+
+### Leitura Opcional (Aprofundamento)
+
+| Arquivo | Conteúdo | Nível |
+|---------|----------|-------|
+| `diferenca.md` | Servidor Web vs MCP, transportes | Intermediário |
+| `protocolo.md` | Métodos MCP (tools/list, tools/call) | Intermediário |
+| `jsonrpc.md` | JSON-RPC 2.0 em profundidade | Avançado |
+
+### Catálogo de APIs Públicas
+
+Para o hands-on, escolha uma API do catálogo:
+
+🔗 **https://www.freepublicapis.com/tags/popular**
+
+APIs sugeridas (sem autenticação):
+- **Open Meteo** — Clima
+- **Free Meal API** — Receitas
+- **HackerNews** — Notícias de tech
+- **Football Data** — Futebol
+- **GamerPower** — Jogos grátis
