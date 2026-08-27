@@ -20,6 +20,7 @@ A Compasso atua no setor de e-commerce e em várias outras frentes. Foi fundada 
 
 - [AI/R Home Page](https://aircompany.ai/home/);
 - [Compass UOL Wikipédia](https://pt.wikipedia.org/wiki/Compass_UOL).
+- Material adicional do workshop está disponível em `material-adicional/` e inclui temas mais específicos para os participantes complementarem seu estudo.
 
 ## O Cliente Nordesul
 
